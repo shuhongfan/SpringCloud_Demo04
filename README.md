@@ -20,12 +20,9 @@
 - Ajax、Json
 - ...
 
-
-
 串一下自己会的东西
 
 - 数据库
-
 - Mybatis
 - Spring
 - SpringMVC
@@ -34,8 +31,6 @@
 - Maven、Git
 - Ajax、Json
 
-
-
 **这个阶段该如何学习**
 
 ```
@@ -43,22 +38,22 @@
 
 框架：
 	Spring IOC AOP
-	
+
 	SpringBoot：新一代的javaEE开发标准，自动装配
-	
+
 	模块化 all in one
-	
+
 	模块化的开发=====>all in one 代码没有变化
-	
+
 微服务的四个核心问题？
 	1.服务很多，客户端怎么访问？
 	2.这么多服务？服务之间如何通信？
 	3.这么多服务？如何治理？
 	4.服务挂了怎么办？
-	
+
 解决方案：
 	Spring Cloud 生态！ SprintBoot
-	
+
 	1.Spring Cloud NetFlix 一站式解决方案
 		api网关：zuul组件
 		通信：Feign ---- HttpClient ---- Http通信方式,同步,阻塞
@@ -71,7 +66,7 @@
     	通信：Dubbo 是一个基于Java的高性能的RPC通信框架(性能比Feign强大)
     	服务注册和发现：Zookeeper
     	熔断机制：没有,需要借助Hystrix
-    	
+  
     	Dubbo这个方案并不完善
 
     3. Spring Cloud Alibaba：目前最新的一站式解决方案！可解决上述4个核心问题,更简单
@@ -79,16 +74,16 @@
     	通信：
 		服务注册和发现：
 		熔断机制：
-		
+	
 新概念：服务网格~ Server Mesh
 	istio
-	
+
 万变不离其宗4个问题：
 	1. API网关
 	2. HTTP,RPC通信
 	3. 注册和发现
 	4. 熔断机制
-	
+
 网络不可靠！
 ```
 
@@ -174,7 +169,7 @@ IDEA 工具里面使用Maven开发的一个个独立的小Moudel，它具体是�
 
 #### 2.4 微服务技术栈有那些？
 
-| **微服务技术条目**                     | 落地技术                                                     |
+| **微服务技术条目**               | 落地技术                                                     |
 | -------------------------------------- | ------------------------------------------------------------ |
 | 服务开发                               | SpringBoot、Spring、SpringMVC等                              |
 | 服务配置与管理                         | Netfix公司的Archaius、阿里的Diamond等                        |
@@ -200,36 +195,33 @@ IDEA 工具里面使用Maven开发的一个个独立的小Moudel，它具体是�
    - 社区热度
    - 可维护性
    - 学习曲线
-
 2. 当前各大IT公司用的微服务架构有那些？
 
    - 阿里：dubbo+HFS
-
    - 京东：JFS
-
    - 新浪：Motan
-
    - 当当网：DubboX
 
      …
 
+   ![1646907326018.png](image/README/1646907326018.png)
 3. 各微服务框架对比
 
-| **功能点/服务框架** | Netflix/SpringCloud                                          | Motan                                                       | gRPC                      | Thrift   | Dubbo/DubboX                        |
-| ------------------- | ------------------------------------------------------------ | ----------------------------------------------------------- | ------------------------- | -------- | ----------------------------------- |
-| 功能定位            | 完整的微服务框架                                             | RPC框架，但整合了ZK或Consul，实现集群环境的基本服务注册发现 | RPC框架                   | RPC框架  | 服务框架                            |
-| 支持Rest            | 是，Ribbon支持多种可拔插的序列号选择                         | 否                                                          | 否                        | 否       | 否                                  |
-| 支持RPC             | 否                                                           | 是(Hession2)                                                | 是                        | 是       | 是                                  |
-| 支持多语言          | 是(Rest形式)                                                 | 否                                                          | 是                        | 是       | 否                                  |
-| 负载均衡            | 是(服务端zuul+客户端Ribbon)，zuul-服务，动态路由，云端负载均衡Eureka（针对中间层服务器） | 是(客户端)                                                  | 否                        | 否       | 是(客户端)                          |
-| 配置服务            | Netfix Archaius，Spring Cloud Config Server 集中配置         | 是(Zookeeper提供)                                           | 否                        | 否       | 否                                  |
-| 服务调用链监控      | 是(zuul)，zuul提供边缘服务，API网关                          | 否                                                          | 否                        | 否       | 否                                  |
-| 高可用/容错         | 是(服务端Hystrix+客户端Ribbon)                               | 是(客户端)                                                  | 否                        | 否       | 是(客户端)                          |
-| 典型应用案例        | Netflix                                                      | Sina                                                        | Google                    | Facebook |                                     |
-| 社区活跃程度        | 高                                                           | 一般                                                        | 高                        | 一般     | 2017年后重新开始维护，之前中断了5年 |
-| 学习难度            | 中等                                                         | 低                                                          | 高                        | 高       | 低                                  |
-| 文档丰富程度        | 高                                                           | 一般                                                        | 一般                      | 一般     | 高                                  |
-| 其他                | Spring Cloud Bus为我们的应用程序带来了更多管理端点           | 支持降级                                                    | Netflix内部在开发集成gRPC | IDL定义  | 实践的公司比较多                    |
+| **功能点/服务框架** | Netflix/SpringCloud                                                                      | Motan                                                       | gRPC                      | Thrift   | Dubbo/DubboX                        |
+| ------------------------- | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------- | ------------------------- | -------- | ----------------------------------- |
+| 功能定位                  | 完整的微服务框架                                                                         | RPC框架，但整合了ZK或Consul，实现集群环境的基本服务注册发现 | RPC框架                   | RPC框架  | 服务框架                            |
+| 支持Rest                  | 是，Ribbon支持多种可拔插的序列号选择                                                     | 否                                                          | 否                        | 否       | 否                                  |
+| 支持RPC                   | 否                                                                                       | 是(Hession2)                                                | 是                        | 是       | 是                                  |
+| 支持多语言                | 是(Rest形式)                                                                             | 否                                                          | 是                        | 是       | 否                                  |
+| 负载均衡                  | 是(服务端zuul+客户端Ribbon)，zuul-服务，动态路由，云端负载均衡Eureka（针对中间层服务器） | 是(客户端)                                                  | 否                        | 否       | 是(客户端)                          |
+| 配置服务                  | Netfix Archaius，Spring Cloud Config Server 集中配置                                     | 是(Zookeeper提供)                                           | 否                        | 否       | 否                                  |
+| 服务调用链监控            | 是(zuul)，zuul提供边缘服务，API网关                                                      | 否                                                          | 否                        | 否       | 否                                  |
+| 高可用/容错               | 是(服务端Hystrix+客户端Ribbon)                                                           | 是(客户端)                                                  | 否                        | 否       | 是(客户端)                          |
+| 典型应用案例              | Netflix                                                                                  | Sina                                                        | Google                    | Facebook |                                     |
+| 社区活跃程度              | 高                                                                                       | 一般                                                        | 高                        | 一般     | 2017年后重新开始维护，之前中断了5年 |
+| 学习难度                  | 中等                                                                                     | 低                                                          | 高                        | 高       | 低                                  |
+| 文档丰富程度              | 高                                                                                       | 一般                                                        | 一般                      | 一般     | 高                                  |
+| 其他                      | Spring Cloud Bus为我们的应用程序带来了更多管理端点                                       | 支持降级                                                    | Netflix内部在开发集成gRPC | IDL定义  | 实践的公司比较多                    |
 
 ## 3. SpringCloud入门概述
 
@@ -389,16 +381,16 @@ MicroServiceCloud父工程(Project)下初次带着3个子模块(Module)
 
 **实际开发版本关系**
 
-| spring-boot-starter-parent |              | spring-cloud-dependencles |              |
-| -------------------------- | ------------ | ------------------------- | ------------ |
-| **版本号**                 | **发布日期** | **版本号**                | **发布日期** |
-| 1.5.2.RELEASE              | 2017-03      | Dalston.RC1               | 2017-x       |
-| 1.5.9.RELEASE              | 2017-11      | Edgware.RELEASE           | 2017-11      |
-| 1.5.16.RELEASE             | 2018-04      | Edgware.SR5               | 2018-10      |
-| 1.5.20.RELEASE             | 2018-09      | Edgware.SR5               | 2018-10      |
-| 2.0.2.RELEASE              | 2018-05      | Fomchiey.BULD-SNAPSHOT    | 2018-x       |
-| 2.0.6.RELEASE              | 2018-10      | Fomchiey-SR2              | 2018-10      |
-| 2.1.4.RELEASE              | 2019-04      | Greenwich.SR1             | 2019-03      |
+| spring-boot-starter-parent |                    | spring-cloud-dependencles |                    |
+| -------------------------- | ------------------ | ------------------------- | ------------------ |
+| **版本号**           | **发布日期** | **版本号**          | **发布日期** |
+| 1.5.2.RELEASE              | 2017-03            | Dalston.RC1               | 2017-x             |
+| 1.5.9.RELEASE              | 2017-11            | Edgware.RELEASE           | 2017-11            |
+| 1.5.16.RELEASE             | 2018-04            | Edgware.SR5               | 2018-10            |
+| 1.5.20.RELEASE             | 2018-09            | Edgware.SR5               | 2018-10            |
+| 2.0.2.RELEASE              | 2018-05            | Fomchiey.BULD-SNAPSHOT    | 2018-x             |
+| 2.0.6.RELEASE              | 2018-10            | Fomchiey-SR2              | 2018-10            |
+| 2.1.4.RELEASE              | 2019-04            | Greenwich.SR1             | 2019-03            |
 
 **使用后两个**
 
@@ -419,17 +411,17 @@ MicroServiceCloud父工程(Project)下初次带着3个子模块(Module)
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
       <modelVersion>4.0.0</modelVersion>
-  
+
       <groupId>nuc.ss</groupId>
       <artifactId>springcloud</artifactId>
       <version>1.0-SNAPSHOT</version>
       <modules>
-  
+
       </modules>
-  
+
       <!--打包方式 pom-->
       <packaging>pom</packaging>
-  
+
       <properties>
           <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
           <maven.compiler.source>1.8</maven.compiler.source>
@@ -438,7 +430,7 @@ MicroServiceCloud父工程(Project)下初次带着3个子模块(Module)
           <lombok.version>1.18.12</lombok.version>
           <log4j.version>1.2.17</log4j.version>
       </properties>
-  
+
       <dependencyManagement>
           <dependencies>
               <!--springcloud的依赖-->
@@ -474,7 +466,7 @@ MicroServiceCloud父工程(Project)下初次带着3个子模块(Module)
                   <artifactId>mybatis-spring-boot-starter</artifactId>
                   <version>2.1.3</version>
               </dependency>
-  
+
               <!--日志测试~-->
               <dependency>
                   <groupId>ch.qos.logback</groupId>
@@ -499,7 +491,7 @@ MicroServiceCloud父工程(Project)下初次带着3个子模块(Module)
               </dependency>
           </dependencies>
       </dependencyManagement>
-      
+
       <build>
           <resources>
               <resource>
@@ -542,9 +534,9 @@ MicroServiceCloud父工程(Project)下初次带着3个子模块(Module)
           <version>1.0-SNAPSHOT</version>
       </parent>
       <modelVersion>4.0.0</modelVersion>
-  
+
       <artifactId>sprintcloud-api</artifactId>
-  
+
       <!--当前的module自己需要的依赖，如果父依赖中已经配置了版本，这里就不用写了-->
       <dependencies>
           <dependency>
@@ -554,50 +546,48 @@ MicroServiceCloud父工程(Project)下初次带着3个子模块(Module)
       </dependencies>
   </project>
   ```
-
 - **数据库的创建**
 
   ![image-20200924193905223](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200924193905223.png)
-
 - **实体类的编写**
 
   ![image-20200924194748640](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200924194748640.png)
 
-    ```java
-    package nuc.ss.springcloud.pojo;
-  
-    import lombok.Data;
-    import lombok.NoArgsConstructor;
-    import lombok.experimental.Accessors;
-    import java.io.Serializable;
-  
-    @Data
-    @NoArgsConstructor
-    @Accessors(chain = true)
-    public class Dept implements Serializable {//实体类  orm 类表关系映射
-  
-        private long deptno;//主键
-        private String dname;
-  
-        //这个数据存在那个数据库的字段，微服务，一个服务对应一个数据库，同一个信息可能存在不同的数据库
-        private String db_source;
-  
-        public Dept(String dname) {
-            this.dname = dname;
-        }
-  
-        /*
-        * 链式写法：
-        * Dept dept = new Dept();
-        *
-        * dept.setDeptNo(11).setDname('ssss').setDb_source('db01')
-        * */
-    }
-    ```
+  ```java
+  package nuc.ss.springcloud.pojo;
+
+  import lombok.Data;
+  import lombok.NoArgsConstructor;
+  import lombok.experimental.Accessors;
+  import java.io.Serializable;
+
+  @Data
+  @NoArgsConstructor
+  @Accessors(chain = true)
+  public class Dept implements Serializable {//实体类  orm 类表关系映射
+
+      private long deptno;//主键
+      private String dname;
+
+      //这个数据存在那个数据库的字段，微服务，一个服务对应一个数据库，同一个信息可能存在不同的数据库
+      private String db_source;
+
+      public Dept(String dname) {
+          this.dname = dname;
+      }
+
+      /*
+      * 链式写法：
+      * Dept dept = new Dept();
+      *
+      * dept.setDeptNo(11).setDname('ssss').setDb_source('db01')
+      * */
+  }
+  ```
 
 **3、子模块springcloud-provider-dept-8081服务的提供者的编写**
 
-​	![image-20200924195248477](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200924195248477.png)
+    ![image-20200924195248477](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200924195248477.png)
 
 **pom配置：**
 
@@ -727,7 +717,7 @@ spring:
     <select id="queryById" resultType="Dept" parameterType="Long">
         select * from dept where deptno = #{id}
     </select>
-    
+  
     <select id="queryAll" resultType="Dept">
         select * from dept
     </select>
@@ -767,8 +757,6 @@ public class DeptController {
 
 **4、子模块springcloud-consumer-dept-80的编写**
 
-
-
 - pom依赖编写
 
   ```xml
@@ -782,16 +770,16 @@ public class DeptController {
           <version>1.0-SNAPSHOT</version>
       </parent>
       <modelVersion>4.0.0</modelVersion>
-  
+
       <artifactId>springcloud-consumer-dept-80</artifactId>
-  
+
       <dependencies>
           <dependency>
               <groupId>nuc.ss</groupId>
               <artifactId>springcloud-api</artifactId>
               <version>1.0-SNAPSHOT</version>
           </dependency>
-  
+
           <dependency>
               <groupId>org.springframework.boot</groupId>
               <artifactId>spring-boot-starter-web</artifactId>
@@ -799,27 +787,24 @@ public class DeptController {
       </dependencies>
   </project>
   ```
-
 - application.yml
 
   ```yaml
   server:
     port: 80
   ```
-
 - **将RestTemplate注册到spring中：**ConfigBean.java
 
   ```java
   @Configuration
   public class ConfigBean {   //Cofiguration -- spring applicationContext.xml
-  
+
       @Bean
       public RestTemplate getRestTemplate() {
           return new RestTemplate();
       }
   }
   ```
-
 - DeptConsumerController.java
 
   ```java
@@ -827,30 +812,29 @@ public class DeptController {
   public class DeptConsumerController {
       // 理解：消费者，不应该有service层
       // RestTemplate ... 供我们直接调用就可以了！注解到spring中
-  
+
       // (url,实体:Map, Class<T> responseType)
       @Autowired
       private RestTemplate restTemplate;//提供多种便捷访问Http的方法
-  
+
       private static final String REST_URL_PREFIX = "http://localhost:8081";
-  
+
       @RequestMapping("/consumer/dept/add")
       public boolean add(Dept dept) {
           return restTemplate.postForObject(REST_URL_PREFIX+"/dept/add",dept,Boolean.class);
       }
-  
+
       @RequestMapping("/consumer/dept/get/{id}")
       public Dept get(@PathVariable("id") Long id) {
           return restTemplate.getForObject(REST_URL_PREFIX+"/dept/get/"+id,Dept.class);
       }
-  
+
       @RequestMapping("/consumer/dept/list")
       public List<Dept> list() {
           return restTemplate.getForObject(REST_URL_PREFIX+"/dept/list",List.class);
       }
   }
   ```
-
 - **启动服务: **DeptConsumer_80
 
   ```java
@@ -861,7 +845,6 @@ public class DeptController {
       }
   }
   ```
-
 - 整体目录结构
 
   ![image-20200926090015210](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200926090015210.png)
@@ -879,29 +862,21 @@ public class DeptController {
 - **Eureka基本的架构**
 
   - Springcloud 封装了Netflix公司开发的Eureka模块来实现服务注册与发现 (对比Zookeeper).
-
   - Eureka采用了C-S的架构设计，EurekaServer作为服务注册功能的服务器，他是服务注册中心.
-
   - 而系统中的其他微服务，使用Eureka的客户端连接到EurekaServer并维持心跳连接。这样系统的维护人员就可以通过EurekaServer来监控系统中各个微服务是否正常运行，Springcloud 的一些其他模块 (比如Zuul) 就可以通过EurekaServer来发现系统中的其他微服务，并执行相关的逻辑.
 
     ![image-20200926091541672](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200926091541672.png)
-
   - 和Dubbo架构对比
 
     ![image-20200926091720464](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200926091720464.png)
-
   - Eureka 包含两个组件：**Eureka Server** 和 **Eureka Client**.
-
   - Eureka Server 提供服务注册，各个节点启动后，回在EurekaServer中进行注册，这样Eureka Server中的服务注册表中将会储存所有课用服务节点的信息，服务节点的信息可以在界面中直观的看到.
-
   - Eureka Client 是一个Java客户端，用于简化EurekaServer的交互，客户端同时也具备一个内置的，使用轮询负载算法的负载均衡器。在应用启动后，将会向EurekaServer发送心跳 (默认周期为30秒) 。如果Eureka Server在多个心跳周期内没有接收到某个节点的心跳，EurekaServer将会从服务注册表中把这个服务节点移除掉 (默认周期为90s).
-
 - **三大角色**
 
   - Eureka Server：提供服务的注册与发现
   - Service Provider：服务生产方，将自身服务注册到Eureka中，从而使服务消费方能狗找到
   - Service Consumer：服务消费方，从Eureka中获取注册服务列表，从而找到消费服务
-
 - 目前工程状况
 
 ### 5.3 构建步骤
@@ -909,7 +884,6 @@ public class DeptController {
 **1. eureka-server**
 
 1. springcloud-eureka-7001 模块建立
-
 2. pom.xml 配置
 
    ```xml
@@ -920,7 +894,7 @@ public class DeptController {
            <artifactId>spring-cloud-starter-eureka-server</artifactId>
            <version>1.4.6.RELEASE</version>
        </dependency>
-   
+
        <!--热部署-->
        <dependency>
            <groupId>org.springframework.boot</groupId>
@@ -928,13 +902,12 @@ public class DeptController {
        </dependency>
    </dependencies>
    ```
-
 3. application.yml
 
    ```yaml
    server:
      port: 7001
-   
+
    # Eureka配置
    eureka:
      instance:
@@ -949,7 +922,6 @@ public class DeptController {
    源码中Eureka的默认端口以及访问路径:
 
    ![image-20200926110043198](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200926110043198.png)
-
 4. 主启动类EurekaServer_7001.java
 
    ```java
@@ -961,7 +933,6 @@ public class DeptController {
        }
    }
    ```
-
 5. 启动成功后访问 http://localhost:7001/ 得到以下页面
 
    ![image-20200926110158171](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200926110158171.png)
@@ -980,7 +951,6 @@ public class DeptController {
         <version>1.4.7.RELEASE</version>
     </dependency>
     ```
-
   - application.yml中新增Eureca配置
 
     ```yaml
@@ -990,7 +960,6 @@ public class DeptController {
         service-url:
           defaultZone: http://localhost:7001/eureka/
     ```
-
   - 为主启动类添加@EnableEurekaClient注解
 
     ```java
@@ -1003,11 +972,9 @@ public class DeptController {
         }
     }
     ```
-
   - 先启动7001服务端后启动8001客户端进行测试，然后访问监控页http://localhost:7001/ 产看结果如图，成功
 
     ![image-20200926120411242](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200926120411242.png)
-
   - **修改Eureka上的默认描述信息**
 
     ```yaml
@@ -1027,7 +994,6 @@ public class DeptController {
     **等30s后 监控会开启保护机制**
 
     ![image-20200926122054630](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200926122054630.png)
-
   - **配置关于服务加载的监控信息**
 
     ![image-20200926122238163](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200926122238163.png)
@@ -1065,7 +1031,7 @@ public class DeptController {
 
 **4. 注册进来的微服务，获取一些消息（团队开发会用到）**
 
-- 启动类添加注解`@EnableDiscoveryClient`
+- 启动类添加注解 `@EnableDiscoveryClient`
 
   ```java
   //启动类
@@ -1078,14 +1044,13 @@ public class DeptController {
       }
   }
   ```
-
 - DeptController.java新增方法
 
   ```java
   //获取一些配置的信息，得到具体的微服务！
   @Autowired
   private DiscoveryClient client;
-  
+
    //注册进来的微服务~，获取一些消息~
    @GetMapping("/dept/discovery")
    public Object discovery() {
@@ -1104,9 +1069,8 @@ public class DeptController {
        }
        return this.client;
    }
-  
-  ```
 
+  ```
 - 结果
 
   ![image-20200927155502206](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200927155502206.png)
@@ -1118,7 +1082,6 @@ public class DeptController {
 **1.初始化**
 
 - 新建springcloud-eureka-7002、springcloud-eureka-7003 模块
-
 - 为pom.xml添加依赖 (与springcloud-eureka-7001相同)
 
   ```xml
@@ -1129,7 +1092,7 @@ public class DeptController {
           <artifactId>spring-cloud-starter-eureka-server</artifactId>
           <version>1.4.7.RELEASE</version>
       </dependency>
-  
+
       <!--热部署-->
       <dependency>
           <groupId>org.springframework.boot</groupId>
@@ -1137,11 +1100,9 @@ public class DeptController {
       </dependency>
   </dependencies>
   ```
-
 - application.yml配置(与springcloud-eureka-7001相同)
 
   端口号分别换成7002和7003
-
 - 主启动类(与springcloud-eureka-7001相同)
 
 **2.集群成员相互关联**
@@ -1149,15 +1110,12 @@ public class DeptController {
 - 配置一些自定义本机名字，找到本机hosts文件并打开
 
   ![image-20200927163816917](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200927163816917.png)
-
 - 在hosts文件最后加上，要访问的本机名称，默认是localhost
 
   ![image-20200927163907513](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200927163907513.png)
-
 - 修改application.yml的配置，如图为springcloud-eureka-7001配置，springcloud-eureka-7002/springcloud-eureka-7003同样分别修改为其对应的名称即可
 
   ![image-20200927164209557](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200927164209557.png)
-
 - 在集群中使springcloud-eureka-7001关联springcloud-eureka-7002、springcloud-eureka-7003
 
   以7001为例：完整的springcloud-eureka-7001下的application.yml如下
@@ -1165,7 +1123,7 @@ public class DeptController {
   ```yaml
   server:
     port: 7001
-  
+
   # Eureka配置
   eureka:
     instance:
@@ -1178,9 +1136,8 @@ public class DeptController {
         # 单机 defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
         # 集群（关联）：7001关联7002、7003
         defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
-  
-  ```
 
+  ```
 - 通过springcloud-provider-dept-8081下的yml配置文件，修改**Eureka配置：配置服务注册中心地址**
 
   ```yaml
@@ -1192,7 +1149,6 @@ public class DeptController {
     instance:
       instance-id: springcloud-provider-dept-8081 #修改Eureka上的默认描述信息
   ```
-
 - 这样模拟集群就搭建号了，就可以把一个项目挂载到三个服务器上了
 
   ![image-20200927170039729](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200927170039729.png)
@@ -1202,7 +1158,6 @@ public class DeptController {
 **1. 回顾CAP原则**
 
 - RDBMS (MySQL\Oracle\sqlServer) ===> ACID
-
 - NoSQL (Redis\MongoDB) ===> CAP
 
 **2. ACID是什么？**
@@ -1220,7 +1175,7 @@ public class DeptController {
 
 CAP的三进二：CA、AP、CP
 
-**4. <font color=red>CAP理论的核心</font>**
+**4. `<font color=red>`CAP理论的核心`</font>`**
 
 - 一个分布式系统不可能同时很好的满足一致性，可用性和分区容错性这三个需求
 - 根据CAP原理，将NoSQL数据库分成了满足CA原则，满足CP原则和满足AP原则三大类
@@ -1247,9 +1202,7 @@ CAP的三进二：CA、AP、CP
 - Eureka仍然能够接受新服务的注册和查询请求，但是不会被同步到其他节点上 (即保证当前节点依然可用)
 - 当网络稳定时，当前实例新的注册信息会被同步到其他节点中
 
-<font color=red>因此，Eureka可以很好的应对因网络故障导致部分节点失去联系的情况，而不会像zookeeper那样使整个注册服务瘫痪</font>
-
-
+`<font color=red>`因此，Eureka可以很好的应对因网络故障导致部分节点失去联系的情况，而不会像zookeeper那样使整个注册服务瘫痪`</font>`
 
 ## 6. Ribbon：负载均衡(基于客户端)
 
@@ -1272,7 +1225,7 @@ CAP的三进二：CA、AP、CP
     - 即在服务的提供方和消费方之间使用独立的LB设施，如Nginx，由该设施负责把访问请求通过某种策略转发至服务的提供方！
   - 进程式LB
     - 将LB逻辑集成到消费方，消费方从服务注册中心获知有哪些地址可用，然后自己再从这些地址中选出一个合适的服务器。
-    - <font color=red>Ribbon 就属于进程内LB</font>，它只是一个类库，集成于消费方进程，消费方通过它来获取到服务提供方的地址！
+    - `<font color=red>`Ribbon 就属于进程内LB`</font>`，它只是一个类库，集成于消费方进程，消费方通过它来获取到服务提供方的地址！
 
 ### 6.2 集成Ribbon
 
@@ -1285,7 +1238,7 @@ CAP的三进二：CA、AP、CP
       <artifactId>spring-cloud-starter-ribbon</artifactId>
       <version>1.4.7.RELEASE</version>
   </dependency>
-  
+
   <!--eureka-->
   <dependency>
       <groupId>org.springframework.cloud</groupId>
@@ -1293,7 +1246,6 @@ CAP的三进二：CA、AP、CP
       <version>1.4.7.RELEASE</version>
   </dependency>
   ```
-
 - 在application.yml文件中配置Eureka
 
   ```yaml
@@ -1304,7 +1256,6 @@ CAP的三进二：CA、AP、CP
       service-url: # 从三个注册中心中随机取一个去访问
         defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
   ```
-
 - 主启动类加上@EnableEurekaClient注解，开启Eureka
 
   ```java
@@ -1316,13 +1267,12 @@ CAP的三进二：CA、AP、CP
       }
   }
   ```
-
 - 自定义Spring配置类：ConfigBean.java 配置负载均衡实现RestTemplate
 
   ```java
   @Configuration
   public class ConfigBean {   //Cofiguration -- spring applicationContext.xml
-  
+
       @LoadBalanced //配置负载均衡实现RestTemplate
       @Bean
       public RestTemplate getRestTemplate() {
@@ -1333,9 +1283,7 @@ CAP的三进二：CA、AP、CP
 
   ![image-20200927185219969](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200927185219969.png)
 
-
-
-​	![image-20200927185342830](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200927185342830.png)
+    ![image-20200927185342830](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200927185342830.png)
 
 ### 6.3 使用Ribbon实现负载均衡
 
@@ -1344,46 +1292,39 @@ CAP的三进二：CA、AP、CP
 - 流程图：
 
   ![image-20200927193721521](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200927193721521.png)
-
 - 创建db02和db03数据库(一样的)
 
   ```mysql
   CREATE DATABASE `db02`
-  
+
   USE `db02`;
-  
+
   DROP TABLE IF EXISTS `dept`;
-  
+
   CREATE TABLE `dept` (
     `deptno` BIGINT(20) NOT NULL AUTO_INCREMENT,
     `dname` VARCHAR(60) DEFAULT NULL,
     `db_source` VARCHAR(60) DEFAULT NULL,
     PRIMARY KEY (`deptno`)
   ) ENGINE=INNODB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='部门表';
-  
-  
+
+
   INSERT  INTO `dept`(`dname`,`db_source`) 
   VALUES ('开发部',DATABASE()),('人事部',DATABASE()),('财务部',DATABASE()),('市场部',DATABASE()),('运维部',DATABASE());
   ```
-
 - 新建两个服务提供者Moudle：springcloud-provider-dept-8082、springcloud-provider-dept-8083
-
 - 参照springcloud-provider-dept-8081 依次为另外两个Moudle添加pom.xml依赖 、resourece下的mybatis和application.yml配置，Java代码
 
-  <font color=red>三个服务（spring.application.name）的名称必须一致</font>
-
+  `<font color=red>`三个服务（spring.application.name）的名称必须一致`</font>`
 - 启动所有服务测试(根据自身电脑配置决定启动服务的个数)，访问http://eureka7001.com:7001/查看结果
 
   ![image-20200927193218112](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200927193218112.png)
-
 - 测试访问http://localhost/consumer/dept/list 这时候随机访问的是服务提供者8081
 
   ![image-20200927193308957](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200927193308957.png)
-
 - 再次访问http://localhost/consumer/dept/list这时候随机的是服务提供者8083
 
   ![image-20200927193329021](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200927193329021.png)
-
 - 再次访问http://localhost/consumer/dept/list这时候随机的是服务提供者8082
 
   ![image-20200927193346522](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20200927193346522.png)
@@ -1397,7 +1338,7 @@ CAP的三进二：CA、AP、CP
   ```java
   @Configuration
   public class ConfigBean {//@Configuration -- spring  applicationContext.xml
-  
+
       /**
        * IRule:
        * RoundRobinRule 轮询
@@ -1410,31 +1351,28 @@ CAP的三进二：CA、AP、CP
       public RestTemplate getRestTemplate() {
           return new RestTemplate();
       }
-  
+
       @Bean
       public IRule myRule(){
           return new RandomRule();//使用随机规则
       }
   }
-  
+
   ```
-
-- 也可以自定义规则，在myRule包下自定义一个配置类MyRule.java，注意：**<font color=red>该包不要和主启动类所在的包同级，要跟启动类所在包同级</font>**：
+- 也可以自定义规则，在myRule包下自定义一个配置类MyRule.java，注意：**`<font color=red>`该包不要和主启动类所在的包同级，要跟启动类所在包同级`</font>`**：
   ![image-20201002124601956](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20201002124601956.png)
-
 - MyRule.java
 
   ```java
   @Configuration
   public class MyRule {
-  
+
       @Bean
       public IRule lzhMyRule() {
           return new MyRandomRule();//默认是轮循，现在我们自定义
       }
   }
   ```
-
 - 主启动类开启负载均衡并指定自定义的MyRule配置类
 
   ```java
@@ -1449,54 +1387,53 @@ CAP的三进二：CA、AP、CP
       }
   }
   ```
-
 - 自定义的规则(这里我们参考Ribbon中默认的规则代码自己稍微改动)：MyRandomRule.java
 
   ```java
   package nuc.ss.myrule;
-  
+
   import com.netflix.client.config.IClientConfig;
   import com.netflix.loadbalancer.AbstractLoadBalancerRule;
   import com.netflix.loadbalancer.ILoadBalancer;
   import com.netflix.loadbalancer.Server;
-  
+
   import java.util.List;
   import java.util.concurrent.ThreadLocalRandom;
-  
+
   public class MyRandomRule extends AbstractLoadBalancerRule {
-  
+
       /**
        * 每个服务访问5次，则换下一个服务(总共3个服务)
        * total=0,默认=0,如果=5,指向下一个服务节点
        * index=0,默认=0,如果total=5,index+1
        */
-  
+
       private int total = 0;          //被调用的次数
       private int currentIndex = 0;   //当前是谁在提供服务
-  
+
       public Server choose(ILoadBalancer lb, Object key) {
           if (lb == null) {
               return null;
           }
           Server server = null;
-  
+
           while (server == null) {
               if (Thread.interrupted()) {
                   return null;
               }
               List<Server> upList = lb.getReachableServers(); //获得当前活着的服务
               List<Server> allList = lb.getAllServers(); //获取所有的服务
-  
+
               int serverCount = allList.size();
               if (serverCount == 0) {
                   return null;
               }
-  
+
               //int index = chooseRandomInt(serverCount);//生成区间随机数
               //server = upList.get(index);//从或活着的服务中,随机获取一个
-  
+
               //=====================自定义代码=========================
-  
+
               if (total < 5) {
                   server = upList.get(currentIndex);
                   total++;
@@ -1508,43 +1445,41 @@ CAP的三进二：CA、AP、CP
                   }
                   //server = upList.get(currentIndex);//从活着的服务中,获取指定的服务来进行操作
               }
-  
+
               //======================================================
-  
+
               if (server == null) {
                   Thread.yield();
                   continue;
               }
-  
+
               if (server.isAlive()) {
                   return (server);
               }
               server = null;
               Thread.yield();
           }
-  
+
           return server;
-  
+
       }
-  
+
       protected int chooseRandomInt(int serverCount) {
           return ThreadLocalRandom.current().nextInt(serverCount);
       }
-  
+
   	@Override
   	public Server choose(Object key) {
   		return choose(getLoadBalancer(), key);
   	}
-  
+
   	@Override
   	public void initWithNiwsConfig(IClientConfig clientConfig) {
   		// TODO Auto-generated method stub
-  		
+
   	}
   }
   ```
-
-  
 
 ## 7.Feign：负载均衡(基于服务端)
 
@@ -1562,7 +1497,7 @@ Feign，主要是社区版，大家都习惯面向接口编程。这个是很多
 **Feign能干什么？**
 
 - Feign旨在使编写Java Http客户端变得更容易
-- 前面在使用Ribbon + RestTemplate时，利用RestTemplate对Http请求的封装处理，形成了一套模板化的调用方法。但是在实际开发中，由于对服务依赖的调用可能不止一处，往往一个接口会被多处调用，所以通常都会针对每个微服务自行封装一个客户端类来包装这些依赖服务的调用。所以，Feign在此基础上做了进一步的封装，由他来帮助我们定义和实现依赖服务接口的定义，<font color=red>在Feign的实现下，我们只需要创建一个接口并使用注解的方式来配置它 (类似以前Dao接口上标注Mapper注解，现在是一个微服务接口上面标注一个Feign注解即可</font>)，即可完成对服务提供方的接口绑定，简化了使用Spring Cloud Ribbon 时，自动封装服务调用客户端的开发量。
+- 前面在使用Ribbon + RestTemplate时，利用RestTemplate对Http请求的封装处理，形成了一套模板化的调用方法。但是在实际开发中，由于对服务依赖的调用可能不止一处，往往一个接口会被多处调用，所以通常都会针对每个微服务自行封装一个客户端类来包装这些依赖服务的调用。所以，Feign在此基础上做了进一步的封装，由他来帮助我们定义和实现依赖服务接口的定义，`<font color=red>`在Feign的实现下，我们只需要创建一个接口并使用注解的方式来配置它 (类似以前Dao接口上标注Mapper注解，现在是一个微服务接口上面标注一个Feign注解即可`</font>`)，即可完成对服务提供方的接口绑定，简化了使用Spring Cloud Ribbon 时，自动封装服务调用客户端的开发量。
 
 **Feign默认集成了Ribbon**
 
@@ -1589,20 +1524,17 @@ Feign，主要是社区版，大家都习惯面向接口编程。这个是很多
    //@FeignClient:微服务客户端注解,value:指定微服务的名字,这样就可以使Feign客户端直接找到对应的微服务
    @FeignClient(value = "SPRINGCLOUD-PROVIDER-DEPT")
    public interface DeptClientService {
-   
+
        @GetMapping("/dept/get/{id}")
        Dept queryById(@PathVariable("id") Long id);
-   
+
        @GetMapping("/dept/list")
        List<Dept> queryAll();
-   
+
        @PostMapping("/dept/add")
        boolean addDept(Dept dept);
    }
    ```
-
-   
-
 2. 创建springcloud-consumer-dept-feign模块
 
    拷贝springcloud-consumer-dept-80模块下的pom.xml，resource，以及java代码到springcloud-consumer-feign模块，并添加feign依赖。
@@ -1621,26 +1553,26 @@ Feign，主要是社区版，大家都习惯面向接口编程。这个是很多
    ```java
    @RestController
    public class DeptConsumerController {
-   
+
        @Autowired
        private DeptClientService deptClientService = null;
-   
+
        @RequestMapping("/consumer/dept/add")
        public boolean add(Dept dept) {
            return this.deptClientService.addDept(dept);
        }
-   
+
        @RequestMapping("/consumer/dept/get/{id}")
        public Dept get(@PathVariable("id") Long id) {
           return this.deptClientService.queryById(id);
        }
-   
+
        @RequestMapping("/consumer/dept/list")
        public List<Dept> list() {
            return this.deptClientService.queryAll();
        }
    }
-   
+
    ```
 
    主配置类
@@ -1655,7 +1587,6 @@ Feign，主要是社区版，大家都习惯面向接口编程。这个是很多
        }
    }
    ```
-
 3. 结果
 
    ![image-20201002135742053](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20201002135742053.png)
@@ -1663,8 +1594,6 @@ Feign，主要是社区版，大家都习惯面向接口编程。这个是很多
 ### 7.3 Feign和Ribbon如何选择？
 
 **根据个人习惯而定，如果喜欢REST风格使用Ribbon；如果喜欢社区版的面向接口风格使用Feign.**
-
-
 
 ## 8. Hystrix：服务熔断
 
@@ -1724,9 +1653,9 @@ Feign，主要是社区版，大家都习惯面向接口编程。这个是很多
 
 服务熔断是应对雪崩效应的一种微服务链路保护机制。例如在高压电路中，如果某个地方的电压过高，熔断器就会熔断，对电路进行保护。同样，在微服务架构中，熔断机制也是起着类似的作用。当调用链路的某个微服务不可用或者响应时间太长时，会进行服务熔断，不再有该节点微服务的调用，快速返回错误的响应信息。当检测到该节点微服务调用响应正常后，恢复调用链路。
 
- 当扇出链路的某个微服务不可用或者响应时间太长时，会进行服务的降级，**进而熔断该节点微服务的调用，快速返回错误的响应信息**。检测到该节点微服务调用响应正常后恢复调用链路。在SpringCloud框架里熔断机制通过Hystrix实现。Hystrix会监控微服务间调用的状况，当失败的调用到一定阀值缺省是5秒内20次调用失败，就会启动熔断机制。熔断机制的注解是：**<font color=red>@HystrixCommand</font>** 。
+ 当扇出链路的某个微服务不可用或者响应时间太长时，会进行服务的降级，**进而熔断该节点微服务的调用，快速返回错误的响应信息**。检测到该节点微服务调用响应正常后恢复调用链路。在SpringCloud框架里熔断机制通过Hystrix实现。Hystrix会监控微服务间调用的状况，当失败的调用到一定阀值缺省是5秒内20次调用失败，就会启动熔断机制。熔断机制的注解是：**`<font color=red>`@HystrixCommand`</font>`** 。
 
-服务熔断解决如下问题： 
+服务熔断解决如下问题：
 
 - 当所依赖的对象不稳定时，能够起到快速失败的目的
 - 快速失败后，能够根据一定的算法动态试探所依赖对象是否恢复
@@ -1766,8 +1695,6 @@ prefer-ip-address: false：
 prefer-ip-address: true：
 
 ![image-20201002180111151](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20201002180111151.png)
-
-
 
 **修改controller**
 
@@ -1831,23 +1758,19 @@ public class DeptProviderHystrix_8081 {
 
 ![image-20201002175735407](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20201002175735407.png)
 
-
-
 因此，**为了避免因某个微服务后台出现异常或错误而导致整个应用或网页报错，使用熔断是必要的**
 
 ### 8.5 服务降级
 
 #### 什么是服务降级
 
-​         服务降级是指 当服务器压力剧增的情况下，根据实际业务情况及流量，对一些服务和页面有策略的不处理或换种简单的方式处理，从而释放服务器资源以保证核心业务正常运作或高效运作。说白了，就是尽可能的把系统资源让给优先级高的服务。
+    服务降级是指 当服务器压力剧增的情况下，根据实际业务情况及流量，对一些服务和页面有策略的不处理或换种简单的方式处理，从而释放服务器资源以保证核心业务正常运作或高效运作。说白了，就是尽可能的把系统资源让给优先级高的服务。
   资源有限，而请求是无限的。如果在并发高峰期，不做服务降级处理，一方面肯定会影响整体服务的性能，严重的话可能会导致宕机某些重要的服务不可用。所以，一般在高峰期，为了保证核心功能服务的可用性，都要对某些服务降级处理。比如当双11活动时，把交易无关的服务统统降级，如查看蚂蚁深林，查看历史订单等等。
 
 服务降级主要用于什么场景呢？当整个微服务架构整体的负载超出了预设的上限阈值或即将到来的流量预计将会超过预设的阈值时，为了保证重要或基本的服务能正常运行，可以将一些 不重要 或 不紧急 的服务或任务进行服务的 延迟使用 或 暂停使用。
   降级的方式可以根据业务来，可以延迟服务，比如延迟给用户增加积分，只是放到一个缓存中，等服务平稳之后再执行 ；或者在粒度范围内关闭服务，比如关闭相关文章的推荐。
 
 ![image-20201002182707872](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20201002182707872.png)
-
-
 
 由上图可得，**当某一时间内服务A的访问量暴增，而B和C的访问量较少，为了缓解A服务的压力，这时候需要B和C暂时关闭一些服务功能，去承担A的部分服务，从而为A分担压力，叫做服务降级**。
 
@@ -1946,13 +1869,9 @@ feign:
 - 触发原因不太一样，服务熔断一般是某个服务（下游服务）故障引起，而服务降级一般是从整体负荷考虑；管理目标的层次不太一样，熔断其实是一个框架级的处理，每个微服务都需要（无层级之分），而降级一般需要对业务有层级之分（比如降级一般是从最外围服务开始）
 - 实现方式不太一样，服务降级具有代码侵入性(由控制器完成/或自动降级)，熔断一般称为**自我熔断**。
 
-
-
 限流：限制并发的请求访问量，超过阈值则拒绝；
 降级：服务分优先级，牺牲非核心服务（不可用），保证核心服务稳定；从整体负荷考虑；
 熔断：依赖的下游服务故障触发熔断，避免引发本系统崩溃；系统自动执行和恢复
-
-
 
 ### 8.7 Dashboard 流监控
 
@@ -2054,9 +1973,9 @@ public class DeptProviderHystrix_8081 {
 }
 ```
 
-**<font color=red>注意：先访问localhost:8081/dept/get/1，在访问localhost:8081/actuator/hystrix.stream，不然也会报错</font>**
+**`<font color=red>`注意：先访问localhost:8081/dept/get/1，在访问localhost:8081/actuator/hystrix.stream，不然也会报错`</font>`**
 
-在springcloud-consumer-hystrix-dashboard中的yml中添加配置（<font color=red>刚开始没加，一直报这个错: Unable to connect to Command Metric Stream</font>）
+在springcloud-consumer-hystrix-dashboard中的yml中添加配置（`<font color=red>`刚开始没加，一直报这个错: Unable to connect to Command Metric Stream`</font>`）
 
 ```yml
 hystrix:
@@ -2091,7 +2010,6 @@ hystrix:
   Hosts：服务请求频率
 
   Circuit Closed：断路状态
-
 - 一圈
   实心圆:公有两种含义，他通过颜色的变化代表了实例的健康程度
   它的健康程度从绿色<黄色<橙色<红色  **递减**
@@ -2099,12 +2017,9 @@ hystrix:
   越大，所以通过该实心圆的展示，就可以在大量的实例中快速发现**故障实例和高压力实例**。
   ![image-20201002205822580](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20201002205822580.png)
   ![image-20201002205857949](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20201002205857949.png)
-
 - 一线
   曲线：用来记录2分钟内流量的相对变化，可以通过它来观察到流量的上升和下降趋势!
   ![image-20201002210211989](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20201002210211989.png)
-
-
 
 ## 9. Zull路由网关
 
@@ -2116,9 +2031,7 @@ hystrix:
 
  其中**路由功能负责将外部请求转发到具体的微服务实例上，是实现外部访问统一入口的基础**，而过**滤器功能则负责对请求的处理过程进行干预，是实现请求校验，服务聚合等功能的基础**。Zuul和Eureka进行整合，将Zuul自身注册为Eureka服务治理下的应用，同时从Eureka中获得其他服务的消息，也即以后的访问微服务都是通过Zuul跳转后获得。
 
-
-
-<font color=red> 注意：Zuul服务最终还是会注册进Eureka</font>
+`<font color=red>` 注意：Zuul服务最终还是会注册进Eureka`</font>`
 
  提供：代理+路由+过滤 三大功能！
 
@@ -2211,8 +2124,6 @@ info:
 
 ![image-20201002220035277](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20201002220035277.png)
 
-
-
 隐藏微服务springcloud-provider-dept的名称在地址栏，application.yml中添加配置
 
 ```yaml
@@ -2289,7 +2200,7 @@ spring cloud config 为微服务架构中的微服务提供集中化的外部支
 
 #### **服务端**
 
-编写application.yml提交到github上或者码云上面（<font color=red>注意：---和空格的输入，否则之后访问补到</font>）
+编写application.yml提交到github上或者码云上面（`<font color=red>`注意：---和空格的输入，否则之后访问补到`</font>`）
 
 ```yaml
 spring:
@@ -2363,11 +2274,11 @@ eureka:
     fetch-registry: false
 ```
 
-<font color=red>注意：default-label属性，默认是master提交，我改成main提交之后页面死活出不来</font>
+`<font color=red>`注意：default-label属性，默认是master提交，我改成main提交之后页面死活出不来`</font>`
 
 ![image-20201003141429024](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20201003141429024.png)
 
-可以输入`git status`查看自己的分支
+可以输入 `git status`查看自己的分支
 
 ![image-20201003142733336](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20201003142733336.png)
 
@@ -2463,9 +2374,8 @@ resources下创建application.yml和bootstrap.yml配置文件
         profile: dev
         label: main
         uri: http://localhost:3344
-  
-  ```
 
+  ```
 - application.yml是用户级别的配置
 
   ```yaml
@@ -2531,12 +2441,12 @@ public class ConfigClient_3355 {
   ---
   server:
     port: 8081
-  
+
   mybatis:
     type-aliases-package: nuc.ss.springcloud.pojo
     config-location: classpath:mybatis/mybatis-config.xml
     mapper-locations: classpath:mybatis/mapper/*.xml
-  
+
   spring:
     profiles: dev
     application:
@@ -2547,27 +2457,27 @@ public class ConfigClient_3355 {
       url: jdbc:mysql://localhost:3306/db01?characterEncoding=utf-8&useUnicode=true
       username: root
       password: admin
-  
+
   eureka:
     client:
       service-url:
         defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
     instance:
       instance-id: springcloud-provider-dept-8081
-  
+
   info:
     app.name: lzh-springcloud
     company.name: com.lzh
-  
+
   ---
   server:
     port: 8081
-  
+
   mybatis:
     type-aliases-package: nuc.ss.springcloud.pojo
     config-location: classpath:mybatis/mybatis-config.xml
     mapper-locations: classpath:mybatis/mapper/*.xml
-  
+
   spring:
     profiles: test
     application:
@@ -2578,20 +2488,19 @@ public class ConfigClient_3355 {
       url: jdbc:mysql://localhost:3306/db02?characterEncoding=utf-8&useUnicode=true
       username: root
       password: admin
-  
+
   eureka:
     client:
       service-url:
         defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
     instance:
       instance-id: springcloud-provider-dept-8081
-  
+
   info:
     app.name: lzh-springcloud
     company.name: com.lzh
-  
-  ```
 
+  ```
 - config-eureka.yml
 
   ```yaml
@@ -2601,12 +2510,12 @@ public class ConfigClient_3355 {
   ---
   server:
     port: 7001
-  
+
   spring:
     profiles: dev
     application:
       name: springcloud-config-eureka
-  
+
   eureka:
     instance:
       hostname: eureka7001.com
@@ -2618,12 +2527,12 @@ public class ConfigClient_3355 {
   ---
   server:
     port: 7001
-  
+
   spring:
     profiles: test
     application:
       name: springcloud-config-eureka
-  
+
   eureka:
     instance:
       hostname: eureka7001.com
@@ -2633,7 +2542,6 @@ public class ConfigClient_3355 {
       service-url:
         defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
   ```
-
 - 上传成功
   ![image-20201003191627269](https://gitee.com/lzh_gitee/springboot_image/raw/master/img/image-20201003191627269.png)
 
@@ -2646,7 +2554,6 @@ public class ConfigClient_3355 {
     application:
       name: springcloud-config-eureka-7001
   ```
-
 - 并新建bootstrap.yml连接远程配置
 
   ```yaml
@@ -2728,4 +2635,3 @@ public class DeptProvider_8081 {
 ```
 
 只需更改github远程即可实现部署
-
