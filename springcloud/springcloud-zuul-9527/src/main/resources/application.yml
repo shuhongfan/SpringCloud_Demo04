@@ -1,0 +1,25 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: springcloud-zuul-9527
+#Eureka的配置,服务注册到哪里
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka,http://localhost:7003/eureka
+  instance:
+    instance-id: zuul9527.com
+    prefer-ip-address: true
+#info配置
+info:
+  app.name: shf-springcloud
+  compant.name: blog.shf.com
+
+zuul:
+  routes:
+    mydept.serviceId: SPRINGCLOUD-PROVIDER-DEPT
+    mydept.path: /mydept/**
+  ignored-services: SPRINGCLOUD-PROVIDER-DEPT  # 忽略路径
+  prefix: /shf  #设置公共的前缀

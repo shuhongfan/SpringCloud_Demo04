@@ -1,0 +1,5 @@
+com\shf\springcloud\controller\DeptConsumerController.class
+com\shf\springcloud\DeptConsumer_80.class
+com\shf\springcloud\config\ConfigBean.class
+com\shf\rule\MyRule.class
+com\shf\rule\MyRandomRule.class
